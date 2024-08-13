@@ -1,4 +1,3 @@
-[![NodeJS with Gulp](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/npm-gulp.yml/badge.svg)](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/npm-gulp.yml)
 
 # gulp-hash [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 Cachebust your assets by adding a hash to the filename
