@@ -1,14 +1,13 @@
 var crypto = require('crypto'),
     through2 = require('through2'),
     Vinyl = require('vinyl'),
-    assign = require('lodash.assign'),
-    template = require('lodash.template'),
+    template = require('underscore').template,
     path = require('path'),
     Promise = require('es6-promise').Promise,
     fs = require('fs');
 
 var exportObj = function(options) {
-	options = assign({}, {
+	options = Object.assign({}, {
 		algorithm: 'sha1',
 		hashLength: 8,
 		template: '<%= name %>-<%= hash %><%= ext %>',
@@ -141,7 +140,7 @@ exportObj.manifest = function(manifestPath, options) {
 
 			if (append) {
 				appendQueue.then(new Promise(function(resolve) {
-					finish(assign({}, origManifestContents[manifestPath], newManifest));
+					finish(Object.assign({}, origManifestContents[manifestPath], newManifest));
 					resolve();
 				}));
 			} else {

@@ -1,6 +1,6 @@
 {
-  "name": "gulp-hash",
-  "version": "4.2.2",
+  "name": "gulpv4-hash",
+  "version": "1.2.2",
   "description": "Cachebust your assets by adding a hash to the filename",
   "license": "MIT",
   "keywords": [
@@ -9,37 +9,10 @@
     "cache bust",
     "gulpplugin"
   ],
-  "author": {
-    "name": "Miikka",
-    "email": "contact@mivir.fi"
-  },
-  "contributors": [
-    {
-      "name": "https://github.com/coen-hyde"
-    },
-    {
-      "name": "https://github.com/jorrit"
-    },
-    {
-      "name": "https://github.com/ai"
-    },
-    {
-      "name": "https://github.com/othree"
-    },
-    {
-      "name": "https://github.com/outpunk"
-    },
-    {
-      "name": "https://github.com/MEGApixel23"
-    },
-    {
-      "name": "https://github.com/migolo"
-    }
-  ],
-  "homepage": "https://github.com/Dragory/gulp-hash",
+  "homepage": "https://github.com/Scorpius-Dev/gulpv4-hash",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Dragory/gulp-hash.git"
+    "url": "git@github.com:Scorpius-Dev/gulpv4-hash.git"
   },
   "scripts": {
     "test": "mocha ./test"
@@ -48,12 +21,12 @@
   "dependencies": {
     "es6-promise": "^2.1.1",
     "lodash.assign": "^2.4.1",
-    "lodash.template": "^2.4.1",
+    "underscore": "^1.13.7",
     "through2": "^2.0.0",
     "vinyl": "^2.1.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^5.0.0",
     "mocha": "^1.20.1"
   }
 }
