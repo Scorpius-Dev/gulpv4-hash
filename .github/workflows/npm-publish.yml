@@ -1,5 +1,12 @@
 name: NPM Publish
 on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      name:
+        description: 'Manual NPM Publish'
+        required: true
+        type: string
   push:
     branches:
       - master
