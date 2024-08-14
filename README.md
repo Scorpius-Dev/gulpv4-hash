@@ -56,6 +56,3 @@ The plugin fully supports both buffers and streams. If you encounter any problem
 
 [npm-url]: https://www.npmjs.org/package/gulp-hash
 [npm-image]: https://badge.fury.io/js/gulp-hash.svg
-
-[travis-url]: https://travis-ci.org/Dragory/gulp-hash
-[travis-image]: https://api.travis-ci.org/Dragory/gulp-hash.svg
