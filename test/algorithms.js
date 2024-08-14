@@ -2,6 +2,7 @@ var path = require('path'),
     fs = require('fs'),
     gulp = require('gulp'),
 	assert = require('assert'),
+	 Stream = require('stream'),
 	through2 = require('through2'),
 	hash = require('../index.js');
 
@@ -11,7 +12,7 @@ describe('hash()', function() {
 			.pipe(hash({
 				algorithm: 'sha1',
 				hashLength: 8,
-        		version: '1',
+        version: '1',
 			}))
 			.pipe(through2.obj(function(file) {
 				assert.equal(path.basename(file.path), 'fixture-1914dcfd.txt');
@@ -64,7 +65,15 @@ describe('hash()', function() {
 					hashLength: 8
 				}))
 				.pipe(through2.obj(function(file) {
-					file.pipe(through2.obj(function(content) {
+					let stream = new Stream.PassThrough()
+
+					if (file.isBuffer() && !file.pipe) {
+						stream.end(file.contents)
+					  } else {
+						stream = file
+					  }
+
+					stream.pipe(through2.obj(function(content) {
 						assert.equal(content.toString(), ref);
 						done();
 					}));
@@ -81,7 +90,7 @@ describe('hash()', function() {
 				}))
 				.pipe(through2.obj(function(file) {
 					var content = "";
-					file.pipe(through2(
+					file.contents.pipe(through2(
 						function(chunk, enc, cb) {
 							content += chunk.toString();
 							cb();

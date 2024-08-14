@@ -12,7 +12,8 @@ var exportObj = function(options) {
 		hashLength: 8,
 		template: '<%= name %>-<%= hash %><%= ext %>',
 		version: ''
-	}, options);  
+	}, options);
+  
 
 	return through2.obj(function(file, enc, cb) {
 		if (file.isDirectory()) {
@@ -133,7 +134,7 @@ exportObj.manifest = function(manifestPath, options) {
 
 				this.push(new Vinyl({
 					path: manifestPath,
-					contents: new Buffer(JSON.stringify(origManifestContents[manifestPath], undefined, space))
+					contents: Buffer(JSON.stringify(origManifestContents[manifestPath], undefined, space))
 				}));
 
 				cb();
