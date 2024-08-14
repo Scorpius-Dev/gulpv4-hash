@@ -1,6 +1,6 @@
 {
   "name": "gulpv4-hash",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Cachebust your assets by adding a hash to the filename",
   "license": "MIT",
   "keywords": [
