@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/node.js.yml/badge.svg)](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/node.js.yml)
+
 Cachebust your assets by adding a hash to the filename
 
 `npm install --save-dev gulpv4-hash`
