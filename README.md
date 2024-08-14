@@ -1,5 +1,3 @@
-
-# gulp-hash [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 Cachebust your assets by adding a hash to the filename
 
 `npm install --save-dev gulpv4-hash`
