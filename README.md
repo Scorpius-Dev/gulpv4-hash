@@ -1,4 +1,5 @@
 [![Node.js CI](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/node.js.yml/badge.svg)](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/node.js.yml)
+[![NPM Publish](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Scorpius-Dev/gulpv4-hash/actions/workflows/npm-publish.yml)
 
 Cachebust your assets by adding a hash to the filename
 
