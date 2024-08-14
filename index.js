@@ -12,7 +12,7 @@ var exportObj = function(options) {
 		hashLength: 8,
 		template: '<%= name %>-<%= hash %><%= ext %>',
 		version: ''
-	}, options);
+	}, options);  
 
 	return through2.obj(function(file, enc, cb) {
 		if (file.isDirectory()) {
@@ -36,13 +36,14 @@ var exportObj = function(options) {
 			function(flushCb) {
 				if (options.version !== '') hasher.update(String(options.version));
 				file.hash = hasher.digest('hex').slice(0, options.hashLength);
+				const compiledTemplate = template(options.template);
 
 				file.origPath = file.relative;
-				file.path = path.join(path.dirname(file.path), template(options.template, {
-					hash: file.hash,
+				file.path = path.join(path.dirname(file.path), compiledTemplate({
 					name: fileName,
-					ext: fileExt
-				}));
+					ext: fileExt,
+					hash: file.hash
+				  }));
 
 				this.push(file);
 				cb();

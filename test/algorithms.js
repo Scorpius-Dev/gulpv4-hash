@@ -11,7 +11,7 @@ describe('hash()', function() {
 			.pipe(hash({
 				algorithm: 'sha1',
 				hashLength: 8,
-        version: '1',
+        		version: '1',
 			}))
 			.pipe(through2.obj(function(file) {
 				assert.equal(path.basename(file.path), 'fixture-1914dcfd.txt');
