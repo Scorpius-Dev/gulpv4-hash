@@ -8,7 +8,7 @@ Cachebust your assets by adding a hash to the filename
 ## Basic usage
 
 ```javascript
-var hash = require('gulp-hash');
+var hash = require('gulpv4-hash');
 
 gulp.src('./js/**/*.js')
 	.pipe(hash()) // Add hashes to the files' names
@@ -55,5 +55,4 @@ The plugin fully supports both buffers and streams. If you encounter any problem
 | append | true | (optional) Whether to merge the new manifest with an existing one's contents (same filename, doesn't have to exist before first run) |
 | space | undefined | (optional) [The space parameter for JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)|
 
-[npm-url]: https://www.npmjs.org/package/gulp-hash
-[npm-image]: https://badge.fury.io/js/gulp-hash.svg
+[npm-url]: https://www.npmjs.org/package/gulpv4-hash
